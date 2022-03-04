@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import store from '../../store';
 import { Item, todoActionType } from "../../store/types";
+import "./index.scss"
 
 type RootState = ReturnType<typeof store.getState>
 
@@ -39,11 +40,11 @@ const TodoItem = () => {
     }
 
     return (
-        <div>
+        <div  className="App">
             {
                 todos?.map((item: Item) => (
                     item.activity === true ? (
-                        <div key={item.id}>
+                        <div key={item.id}  className="header" >
                             {/* <p>{item.title}</p> */}
                             <input
                                 defaultValue={item.title}
@@ -60,7 +61,11 @@ const TodoItem = () => {
                                 onClick={() => onRemove(item.id)}>
                                 delete?
                             </button>
-                            <input type='checkbox' checked={false} onChange={() => onChange(item.id)} />
+                            <input 
+                              type='checkbox' 
+                              checked={false} 
+                              onChange={() => onChange(item.id)}
+                              className='btn_chekbox' />
                         </div>
 
                     ) : (

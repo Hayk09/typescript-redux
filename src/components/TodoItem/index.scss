@@ -1,0 +1,20 @@
+.App{
+    // background-color: rgb(243, 233, 233);
+  
+     .btn_restore{
+         background-color: rgb(90, 87, 89);
+         color: white;
+         border-radius: 6px;
+         margin-left: 6px;
+     }
+     .btn_delete{
+         background-color: rgb(168, 54, 54);
+         border-radius: 6px;
+         color: aliceblue;
+         margin-left: 6px;
+     }
+     .btn_chekbox{
+         width: 15px;
+         height: 15px;
+     }
+}

@@ -32,10 +32,12 @@ const AddTodo: FC = () => {
 
     return (
         <div className="header">
+            <div>
             <form className='form' noValidate onSubmit={handleSubmit(submit)}>
                 <input
                     type='text'
                     placeholder='title'
+                    className="input_add"
                     {...register("title", { required: true })}
                 />
                 <button
@@ -44,6 +46,7 @@ const AddTodo: FC = () => {
                       Add Task
                 </button>
             </form>
+            </div>
         </div>
     )
 }
